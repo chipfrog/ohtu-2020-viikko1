@@ -1,3 +1,5 @@
 Todo:
 
 -ohtun tehtävät
+-uusi todo
+-tiskaa
