@@ -1,5 +1,7 @@
 package ohtu.ohtuvarasto;
 
+import javax.sound.sampled.SourceDataLine;
+
 public class Varasto {
 
     // --- piilotettu tietorakenteen toteutus: ---
@@ -18,15 +20,14 @@ public class Varasto {
         saldo = 0;     // oletus: varasto on tyhjä
     }
 
-    public Varasto(double tilavuus, double alkuSaldo) { // kuormitetaan
+    public Varasto(double alkuTilavuus, double alkuSaldo) { // kuormitetaan
         double tempSaldo = Math.max(0, alkuSaldo);
-        this.tilavuus = Math.max(0,tilavuus);
+        this.tilavuus = Math.max(0, alkuTilavuus);
         if (tempSaldo > tilavuus) {
             this.saldo = tilavuus;
         } else {
             this.saldo = tempSaldo;
         }
-
     }
 
     // --- ottavat aksessorit eli getterit: ---
